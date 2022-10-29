@@ -1,0 +1,183 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Tapestry&display=swap" rel="stylesheet">
+
+
+<body style="background-image:url('https://media.istockphoto.com/photos/scary-horror-background-halloween-theme-picture-id1337209074?b=1&k=20&m=1337209074&s=170667a&w=0&h=RZx1zz34XMKxkoy0jsyunqILfjM2XLllzA6XqDGWUcY='); background-repeat: no-repeat; background-size: cover !important; margin:0;display: flex; align-items: center;justify-content: space-between;;-ms-flex-pack: space-between;height:100vh;">
+
+<img id="pic" align=left src=https://i.postimg.cc/50VY8sWf/a9b84c6de2c61890cb28add6a923b99e-preview-rev-3.png width=auto height=100% style="margin-left: -200px; transition: 5s;">
+
+<center style="background-color: #e6e6e6; border-style: solid; border-color: #8c8c8c; border-radius: 25px;">
+<font color="#4d4d4d" style="font-family: 'Grenze Gotisch', cursive;font-size:80px;"><b>Amelouth</b></font>
+ <br>
+
+ 
+<br>
+<font color="#4d4d4d" face='verdana' style="font-family: 'Tapestry', cursive;font-size:20px;">
+A woman with a single wing, thick with the scent of Poppylus petals, fixed to her mantle as it appears to be hand-fastened to her back. Layers of reticulate scarring envelop her forearms down to her fingertips. 
+</font>
+
+<br>
+
+</center>
+
+<div class="bloody" style="position:fixed; z-index:9999;width:100%;height:100%;">
+  <div class="drop"></div>
+  <div class="wave"></div>
+</div>
+<div class="bloody" style="position:fixed; z-index:9999;width:100%;height:100%;">
+  <div class="drop"></div>
+  <div class="wave"></div>
+</div>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+
+$('#pic').hide();
+$('font').hide();
+$('#pic').animate({"margin-left": '+=200'}, 1000);
+$('#pic').fadeTo(3000, 1.0);
+$('font').fadeTo(3000, 1.0);
+
+});
+
+
+</script>
+
+
+<style>
+
+.bloody {
+  /*background-color: #000;*/
+  overflow: hidden;
+}
+
+div {
+  margin: 175px auto;
+}
+
+.drop {
+  position: relative;
+	width: 20px;
+	height: 20px;
+  top: -30px;
+  margin: 0 auto;
+	background: #F00;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+  -moz-animation-name: drip;
+  -webkit-animation-name: drip;
+  animation-name: drip;
+  -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 30px solid rgba(255,0,0,1);
+  top: -22px;
+}
+
+.wave {
+  position: relative;
+  opacity: 0;
+  top: 400;
+	width: 2px;
+	height: 1px;
+  border: #F00 7px solid;
+	-moz-border-radius: 300px / 150px;
+	-webkit-border-radius: 300px / 150px;
+	border-radius: 300px / 150px;
+  -moz-animation-name: ripple;
+  -webkit-animation-name: ripple;
+  animation-name: ripple;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.wave:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: -5px;
+  left: -5px;
+	width: 2px;
+	height: 1px;
+  border: #F00 5px solid;
+	-moz-border-radius: 300px / 150px;
+	-webkit-border-radius: 300px / 150px;
+	border-radius: 300px / 150px;
+  -moz-animation-name: ripple-2;
+  -webkit-animation-name: ripple-2;
+  animation-name: ripple-2;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 600px;
+      height: 300px;
+      border-width: 1px;
+      top: 300px;
+      opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 100px;
+    left: 200px;
+  }
+}
+
+@keyframes drip {
+    to {
+      top: 590px;
+    }
+}
+
+</style>
